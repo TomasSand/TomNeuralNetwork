@@ -4,8 +4,6 @@ var noteArray = [];
 var timeArray = [];
 var i=0;
 
-alert("Ciao sono la rete Neurale artificiale di Tomas!!!");
-
 
 //Listen midikeyboard
 function ListenMidikeyboard(){
