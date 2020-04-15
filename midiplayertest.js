@@ -7,6 +7,7 @@ var i=0;
 
 //Listen midikeyboard
 function ListenMidikeyboard(){
+    alert("Ciao sono la rete Neurale artificiale di Tomas...connetti una tastiera Midi e suona una frase...");
     var msg=document.getElementById('msg');
     var evnt=document.getElementById('evnt');
         console.log(navigator.requestMIDIAccess);
