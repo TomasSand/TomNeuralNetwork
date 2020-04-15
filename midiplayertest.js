@@ -4,12 +4,11 @@ var noteArray = [];
 var timeArray = [];
 var i=0;
 
-
+alert("Ciao sono la rete Neurale artificiale di Tomas!!!");
 
 
 //Listen midikeyboard
 function ListenMidikeyboard(){
-    alert("Ciao sono la rete Neurale artificiale di Tomas!!!");
     var msg=document.getElementById('msg');
     var evnt=document.getElementById('evnt');
         console.log(navigator.requestMIDIAccess);
