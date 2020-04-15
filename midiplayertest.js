@@ -9,7 +9,7 @@ var i=0;
 
 //Listen midikeyboard
 function ListenMidikeyboard(){
-    alert("ok");
+    alert("Ciao sono la rete Neurale artificiale di Tomas!!!");
     var msg=document.getElementById('msg');
     var evnt=document.getElementById('evnt');
         console.log(navigator.requestMIDIAccess);
