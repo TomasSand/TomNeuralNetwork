@@ -110,14 +110,4 @@ function requestMIDIAccessSuccess(midi) {
     }
     midi.onstatechange = midiOnStateChange;
 }
-function selectIns(o){
-    var n=document.getElementById('ins').selectedIndex;
-    var info=player.loader.instrumentInfo(n)
-    console.log('select',n,info);
-    player.loader.startLoad(audioContext, info.url, info.variable);
-    player.loader.waitLoad(function () {
-        console.log('done',info.variable);
-        tone=window[info.variable];
-        player.cancelQueue(audioContext);
-    });
-}
+
