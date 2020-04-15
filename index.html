@@ -1,37 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tom Neural Network</title>
+	<script src='https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js'></script>
+	<script src='https://surikov.github.io/webaudiofontdata/sound/0000_JCLive_sf2_file.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
 
-<html>
-	<head>
-		<title>Tom Neural Network</title>
-		<script src='https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js'></script>
-		<script src='https://surikov.github.io/webaudiofontdata/sound/0000_JCLive_sf2_file.js'></script>
-		<script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
-		<script type="text/javascript" language="javascript" src="midiInputData.js"></script> 
+</head>
+<body>
+
+	<p><select id='ins' onchange="selectIns(this)"></select></p>
+	<p id='msg'>Connect MIDI-keyboard and refresh the page.</p>
+	<p id='evnt'>...</p>
+	<hr/> 
+	<div>
+		<h1 onclick="instrument();ListenMidikeyboard();">Enable Audio</h1>
+	</div>
+	<div>
+		<p id="NoteNumber"></p>
+	</div>
+
+	<div>
+		<p id="noteArray"></p>
+	</div>
+
+	<div>
+		<p id="timeArray"></p>
+	</div>
 
 
-	</head>
-	<body>
-		
+	<script type="text/javascript" language="javascript" src="ReteRNN.js"></script> 
+	<script type="text/javascript" language="javascript" src="midiplay.js"></script>
 
-<div>
-	<p id="note"></p>
-</div>
 
-<div>
-	<p id="velocity"></p>
-</div>
-
-<div>
-	<p id="noteArray"></p>
-</div>
-
-<div>
-	<p id="timeArray"></p>
-</div>
-
-<div>
-	<p id="computer"></p>
-</div>
-	
-		
-	</body>
+</body>
 </html>
