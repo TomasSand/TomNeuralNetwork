@@ -11,7 +11,6 @@ navigator.requestMIDIAccess().then(access => {
    const devices = access.inputs.values();
     for (let device of devices)
         device.onmidimessage = onMidiMessage;
-        document.getElementById('evnt').innerHTML=devices.onMidiMessage;
 }).catch(console.error);
 
 
