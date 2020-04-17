@@ -3,7 +3,6 @@ var music_rnn, rnnPlayer;
 var melody1;
 Players();
 inizializzamodello();
-// melodysequence();
 
 
 function Players() {
@@ -36,7 +35,6 @@ function melodysequence() {
     totalTime: timeArray[19]
     };
     i=0;
-    // MagentaPlayer.start(melody1);
     playRNN();
   }
 
