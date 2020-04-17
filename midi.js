@@ -1,5 +1,4 @@
 
-console.clear;
 var noteArray = [];
 var timeArray = [];
 var note;
