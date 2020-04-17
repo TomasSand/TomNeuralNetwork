@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tom Neural Network</title>
-	<script src='https://surikov.github.io/webaudiofont/npm/dist/WebAudioFontPlayer.js'></script>
-	<script src='https://surikov.github.io/webaudiofontdata/sound/0000_JCLive_sf2_file.js'></script>
-	<script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Neural Network</title>
+    <script type="text/javascript" language="javascript" src="midi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
+    <script type="text/javascript" language="javascript" src="ReteRNN.js"></script>
 </head>
+
 <body>
-	
-	<h2>Ciao sono la rete Neurale Artificiale di Tomas...connetti una Tastiera Midi e suona una frase...</h2>
-	
-	<p id='msg'></p>
-	<p id='evnt'>...</p>
-	<hr/> 
-	
-	<div>
-		<p id="NoteNumber"></p>
-	</div>
+    <h3>Ciao sono la rete Neurale di Tomas, connetti una Tastiera Midi e suona una frase...</h3>
+    <p id="mididevice"></p>
+    <p id="noteArray"></p>
+    <p id="timeArray"></p>
+    <p id="noteNumber"></p>
 
-	<div>
-		<p id="noteArray"></p>
-	</div>
-
-	<div>
-		<p id="timeArray"></p>
-	</div>
-
-
-	<script type="text/javascript" language="javascript" src="ReteRNN.js"></script> 
-	<script type="text/javascript" language="javascript" src="midiInputData.js"></script>
 
 </body>
 </html>
