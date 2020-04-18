@@ -5,6 +5,22 @@ Players();
 inizializzamodello();
 
 
+function enable(){
+  console.log("abilitato");
+  if(MagentaPlayer.state === 'running') {
+    MagentaPlayer.suspend().then(function() {
+      susresBtn.textContent = 'Resume context';
+    });
+  } else if(MagentaPlayer.state === 'suspended') {
+    MagentaPlayer.resume().then(function() {
+      susresBtn.textContent = 'Suspend context';
+    });
+  }
+}
+
+
+
+
 function Players() {
   MagentaPlayer = new mm.Player();
   MagentaPlayer = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
@@ -12,8 +28,7 @@ function Players() {
 }
 
 function melodysequence() {
-  
-    
+
   melody1 = {
     notes: [
       {pitch: noteArray[0], startTime: timeArray[0], endTime: timeArray[1]},
@@ -34,7 +49,7 @@ function melodysequence() {
     }],
     totalTime: timeArray[19]
     };
-    i=0;
+    
     playRNN();
   }
 
@@ -57,6 +72,8 @@ function playRNN() {
   music_rnn
   .continueSequence(qns, rnn_steps, rnn_temperature)
   .then((sample) => MagentaPlayer.start(sample))
+  noteArray = [];
+  timeArray = [];
   
 }
 
