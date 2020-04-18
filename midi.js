@@ -44,7 +44,7 @@ function getMIDIMessage(midiMessage) {
   timeStamp=midiMessage.timeStamp;
   
   if (velocity>0){
-    //start time count
+    
     noteArray[i] = pitch;
     timeArray[i] = timeStamp/1000;
     document.getElementById('noteArray').innerHTML=("Note:"+pitch);
