@@ -35,7 +35,6 @@ function onMIDISuccess(midiAccess) {
 
 function getMIDIMessage(midiMessage) {
   console.log(i);
-  if (i<21){
   console.log(midiMessage);
   document.getElementById('mididevice').innerHTML=(midiMessage.srcElement.name);
   console.log("Note:"+midiMessage.data[0]+"  "+"Velocity:"+midiMessage.data[2]+"  "+"timeStamp:"+midiMessage.timeStamp);
@@ -44,24 +43,17 @@ function getMIDIMessage(midiMessage) {
   timeStamp=midiMessage.timeStamp;
   
   if (velocity>0){
-    
     noteArray[i] = pitch;
     timeArray[i] = timeStamp/1000;
     document.getElementById('noteArray').innerHTML=("Note:"+pitch);
     document.getElementById('timeArray').innerHTML=("Time Stamps:"+(timeStamp/1000));
   }
-
   if (velocity==0){
     i++;
     timeArray[i] = timeStamp/1000;
     document.getElementById('timeArray').innerHTML=("Time Stamps:"+(timeStamp/1000));
     i++;
     document.getElementById('noteNumber').innerHTML=("Numero di note suonate:"+i);
-    }
-  }else{
-    i=0;
-    alert("Generazione risposta...");
-    melodysequence();
   }
 }
 
