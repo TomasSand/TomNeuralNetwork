@@ -34,6 +34,8 @@ function onMIDISuccess(midiAccess) {
 
 
 function getMIDIMessage(midiMessage) {
+  console.log(i);
+  if (i<21){
   console.log(midiMessage);
   document.getElementById('mididevice').innerHTML=(midiMessage.srcElement.name);
   console.log("Note:"+midiMessage.data[0]+"  "+"Velocity:"+midiMessage.data[2]+"  "+"timeStamp:"+midiMessage.timeStamp);
@@ -56,15 +58,12 @@ function getMIDIMessage(midiMessage) {
     i++;
     document.getElementById('noteNumber').innerHTML=("Numero di note suonate:"+i);
     }
-
-    if (i>21){
-      alert("Generazione Risposta...");
-      i=0;
-      melodysequence();
+  }else{
+    i=0;
+    alert("Generazione risposta...");
+    melodysequence();
   }
 }
-
-
 
 
 
