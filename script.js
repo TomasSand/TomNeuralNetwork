@@ -8,7 +8,6 @@ let i=0;
 
 function readNote(){
     
-    // attach the listener to the keyboard events
     document.querySelector('tone-keyboard').addEventListener('noteon', e => {
       
       switch (e.detail.name){
@@ -76,7 +75,6 @@ function readNote(){
       synth.triggerAttack(e.detail.name)
     })
 
-    // attach a listener for the keyboard events to be taken off the key
     document.querySelector('tone-keyboard').addEventListener('noteoff', e => {
     synth.triggerRelease()
     if (note !=null){
