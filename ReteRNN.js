@@ -5,22 +5,6 @@ Players();
 inizializzamodello();
 
 
-function enable(){
-  console.log("abilitato");
-  if(MagentaPlayer.state === 'running') {
-    MagentaPlayer.suspend().then(function() {
-      susresBtn.textContent = 'Resume context';
-    });
-  } else if(MagentaPlayer.state === 'suspended') {
-    MagentaPlayer.resume().then(function() {
-      susresBtn.textContent = 'Suspend context';
-    });
-  }
-}
-
-
-
-
 function Players() {
   MagentaPlayer = new mm.Player();
   MagentaPlayer = new mm.SoundFontPlayer('https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus');
@@ -72,8 +56,6 @@ function playRNN() {
   music_rnn
   .continueSequence(qns, rnn_steps, rnn_temperature)
   .then((sample) => MagentaPlayer.start(sample))
-  noteArray = [];
-  timeArray = [];
   
 }
 
